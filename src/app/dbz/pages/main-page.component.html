@@ -1,0 +1,13 @@
+<h1>DBZ Main Page</h1>
+<hr>
+
+<div class="row">
+  <div class="col">
+    <!-- $event hace referencia al valor que se esta emitiendo desde el onEmitDeleteIdCharacter.emit(index);
+    en este caso index es el que viene en el $event -->
+    <app-dbz-list (onEmitDeleteIdCharacter)="onDeleteCharacter($event)" [characterList]="characters"></app-dbz-list>
+  </div>
+  <div class="col">
+    <app-dbz-add-character (onEmitNewCharacter)="onNewCharacter($event)"></app-dbz-add-character>
+  </div>
+</div>
